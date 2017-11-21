@@ -1,33 +1,5 @@
 
 
-
-
-DocViewer
-
-
-
-
-Page  of 4
-
-
-
-
-Zoom
-
-
-
-
-Pages
-
-
-
-
-
-
-
-#Modify file
-
-
 import string,random,time,azurerm,json
 from azure.storage.table import TableService, Entity
 # Define variables to handle Azure authentication
