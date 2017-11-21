@@ -1,14 +1,13 @@
 
-
 import string,random,time,azurerm,json
 from azure.storage.table import TableService, Entity
 # Define variables to handle Azure authentication
 auth_token = azurerm.get_access_token_from_cli()
 subscription_id = azurerm.get_subscription_from_cli()
 # Define variables with random resource group and storage account names
-resourcegroup_name = 'PS1'+''.join(random.choice(string.ascii_lowercase + 
+resourcegroup_name = 'zdj'+''.join(random.choice(string.ascii_lowercase + 
 string.digits) for _ in range(6))
-storageaccount_name = 'PS1'+''.join(random.choice(string.ascii_lowercase + 
+storageaccount_name = 'zdj'+''.join(random.choice(string.ascii_lowercase + 
 string.digits) for _ in range(6))
 location = 'eastus'
 ###
@@ -112,6 +111,8 @@ pizza.RowKey = '003'
 
 
 
+
+
 pizza.description = 'Hawaiian'
 pizza.cost = 12
 table_service.insert_entity('itemstable', pizza)
@@ -168,6 +169,9 @@ print('Name: ' + item.description)
 
 
 
+
+
+
 print('Price: ' + str(item.price) + '\n')
 time.sleep(1)
 ###
@@ -195,5 +199,5 @@ print('Error deleting resource group.')
 
 
 
+
 Annotations
-  
